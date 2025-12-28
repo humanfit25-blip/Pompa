@@ -1,0 +1,273 @@
+Ok … me ayudas a crear un nuevo protocolo? No por modificar el nuestro , si no por comparar este que he creado tomando en cuenta otros parámetros . No sé si al añadir días cambiaría los primeros 3 que hemos estructurado. Hagamos 14 días derealimentacion  desde el día 0 en adelante , ciñéndose a nuestro estilo de vida , que evite globalización médica común , NO ENTRAR AL BAREMO DEL SISTEMA MÉDICO . 
+
+• Atleta femenino , 70 kilos , entrenamiento 60’/90’ 6 sesiones semanales (bajando la intensidad estos días , hasta que indiquemos lo contrario ) eutirox 150mg, ducha heladas diarias , aunque su vida normal ella se despierta a las 5:00 horas ,va a rebajar hasta las 14:00 (de pie todo el día dando clases de CrossFit) tiene 15 días de vacaciones en su trabajo , pero seguirá entrenando. 
+
+Tiene 5 años practicando ayunos de 24 horas lunes y viernes (semanalmente desde entonces sin interrupción)
+
+Intenta darme la información que pueda copiar todos los días juntos y no día por día ?
+
+Aquí te paso el código con el otro protocolo que quería crear en un HTML 
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROTOCOLO FÉNIX 14 DÍAS - Realimentación Post-96h Elite</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #333; min-height: 100vh; padding: 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    h1 { text-align: center; color: #1a1a1a; margin-bottom: 10px; font-size: 2.2em; }
+    .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+    .tabs { display: flex; justify-content: center; margin-bottom: 30px; }
+    .tab-btn { background: #f8f9fa; border: none; padding: 15px 30px; margin: 0 5px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: all 0.3s; font-size: 1em; }
+    .tab-btn.activo { background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white; box-shadow: 0 10px 20px rgba(238,90,82,0.4); transform: translateY(-2px); }
+    .protocolo { display: none; animation: fadeIn 0.5s; }
+    .protocolo.activo { display: block; }
+    .dia { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); margin: 20px 0; padding: 25px; border-radius: 20px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .dia h3 { font-size: 1.8em; margin-bottom: 20px; text-align: center; }
+    .comida { background: rgba(255,255,255,0.2); padding: 15px; margin: 10px 0; border-radius: 15px; backdrop-filter: blur(10px); }
+    .hora { font-weight: bold; color: #ffd700; font-size: 1.1em; margin-bottom: 8px; }
+    .calorias { text-align: right; color: #90EE90; font-weight: bold; font-size: 1.2em; }
+    .suplementos { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: #1a1a1a; padding: 20px; border-radius: 15px; margin: 20px 0; }
+    .entrenamiento { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: #1a1a1a; padding: 20px; border-radius: 15px; margin: 20px 0; }
+    .metrics { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: #1a1a1a; padding: 20px; border-radius: 15px; margin: 20px 0; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) { .container { padding: 20px; margin: 10px; } .dia { padding: 20px 15px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 PROTOCOLO FÉNIX 14 DÍAS</h1>
+    <p class="subtitle">Realimentación Post-96h • Atleta Femenina 48a • 70kg • Hashimoto • CrossFit Elite • Vacaciones 15 días</p>
+    
+    <div class="tabs">
+      <button class="tab-btn activo" onclick="mostrarProtocolo('fenix')">🌿 FÉNIX 14 DÍAS</button>
+    </div>
+
+    <div id="fenix" class="protocolo activo">
+      
+      <!-- SUPLEMENTACIÓN FIJA -->
+      <div class="suplementos">
+        <h3>💊 SUPLEMENTACIÓN OBLIGATORIA (Días 0-14)</h3>
+        <p><strong>B1 100mg | Magnesio glicinato 400mg | Selenio 200mcg (nueces Brasil)</strong></p>
+        <p><strong>Myo-inositol 600mg | Nigella sativa 1g | Complejo B 50mg | Glutamina 5g</strong></p>
+        <p><em>EUTIROX 150mcg: 6:30h (60min ayunas) | DUCHAS HELADAS: 5min post-entreno</em></p>
+      </div>
+
+      <!-- ENTRENAMIENTO -->
+      <div class="entrenamiento">
+        <h3>🏋️ ENTRENAMIENTO PROGRESIVO (%1RM)</h3>
+        <p><strong>D0-2: 40% | D3-5: 60% | D6-9: 75% | D10-14: 85-90%</strong></p>
+        <p>Duración: 60-90min | Frecuencia: 6x/semana | <strong>Descanso: Miércoles</strong></p>
+      </div>
+
+      <!-- DÍA 0 -->
+      <div class="dia">
+        <h3>🎯 DÍA 0 - RUPTURA 15:00h (800kcal)</h3>
+        <div class="comida">
+          <div class="hora">6:30</div>
+          <p>Eutirox 150mcg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">15:00</div>
+          <p>Caldo huesos 400ml + 0.5g sal marina + magnesio 200mg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">17:00</div>
+          <p>Caldo huesos 300ml</p>
+        </div>
+        <div class="comida">
+          <div class="hora">19:00</div>
+          <p>Caldo huesos 300ml + 1/4 aguacate</p>
+        </div>
+        <div class="comida">
+          <div class="hora">21:00</div>
+          <p>Descanso + ducha helada ligera | <strong>Suple: B1 100mg + selenio</strong></p>
+        </div>
+        <div class="calorias">Total: Sodio 3g | Potasio 1.5g | Magnesio 400mg</div>
+      </div>
+
+      <!-- DÍA 1 -->
+      <div class="dia">
+        <h3>🛡️ DÍA 1 - MUCOSA (1000kcal)</h3>
+        <div class="comida">
+          <div class="hora">6:30</div>
+          <p>Eutirox 150mcg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">9:00</div>
+          <p>2 huevos cocidos + espinacas vapor + 4 nueces Brasil</p>
+        </div>
+        <div class="comida">
+          <div class="hora">11:00</div>
+          <p>Caldo huesos 300ml</p>
+        </div>
+        <div class="comida">
+          <div class="hora">13:00</div>
+          <p>Pollo plancha 150g + calabacín + 1/2 aguacate</p>
+        </div>
+        <div class="comida">
+          <div class="hora">15:00</div>
+          <p>Movilidad CrossFit 30min (40%) + ducha helada</p>
+        </div>
+        <div class="comida">
+          <div class="hora">17:00</div>
+          <p>Caldo + pepino + aceitunas | <strong>Suple: Glutamina 5g + myo-inositol</strong></p>
+        </div>
+        <div class="calorias">Proteína 60g | Carbo 30g | Grasa 50g</div>
+      </div>
+
+      <!-- DÍA 2 - NOCHE VIEJA -->
+      <div class="dia">
+        <h3>🥂 DÍA 2 - NOCHE VIEJA 31 DIC (1400kcal)</h3>
+        <div class="comida">
+          <div class="hora">6:30</div>
+          <p>Eutirox 150mcg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">9:00</div>
+          <p>2 huevos cocidos + espinacas vapor + 4 nueces Brasil</p>
+        </div>
+        <div class="comida">
+          <div class="hora">11:00</div>
+          <p>Caldo huesos 300ml</p>
+        </div>
+        <div class="comida">
+          <div class="hora">13:00</div>
+          <p>Pollo plancha 150g + calabacín + 1/2 aguacate</p>
+        </div>
+        <div class="comida">
+          <div class="hora">15:00</div>
+          <p>Movilidad CrossFit 30min (40%) + ducha helada</p>
+        </div>
+        <div class="comida">
+          <div class="hora">20:00 - CENA ESPECIAL</div>
+          <p><strong>3 chuletitas lechal 200g + calabaza asada 200g + langostinos 100g + espárragos 150g + 1/2 aguacate + 5 nueces Brasil + infusión jengibre</strong></p>
+        </div>
+        <div class="calorias">Proteína 90g | Carbo 50g | Grasa 65g</div>
+      </div>
+
+      <!-- DÍA 3 -->
+      <div class="dia">
+        <h3>🔥 DÍA 3 - MICROBIOTA (1400kcal)</h3>
+        <div class="comida">
+          <div class="hora">6:30</div>
+          <p>Eutirox 150mcg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">9:00</div>
+          <p>2 huevos + espárragos</p>
+        </div>
+        <div class="comida">
+          <div class="hora">11:00</div>
+          <p>Pera + kéfir cabra + 5 nueces Brasil</p>
+        </div>
+        <div class="comida">
+          <div class="hora">13:00</div>
+          <p>Pollo 200g + calabaza asada</p>
+        </div>
+        <div class="comida">
+          <div class="hora">15:00</div>
+          <p>CrossFit moderado 60min (60%) + ducha helada</p>
+        </div>
+        <div class="comida">
+          <div class="hora">17:00</div>
+          <p>Chuletas cordero 200g + calabaza asada | <strong>Suple: Complejo B</strong></p>
+        </div>
+        <div class="calorias">Proteína 90g | Carbo 60g | Grasa 65g</div>
+      </div>
+
+      <!-- DÍA 4 -->
+      <div class="dia">
+        <h3>⚡ DÍA 4 - PGC-1α PEAK (1600kcal)</h3>
+        <div class="comida">
+          <div class="hora">6:30</div>
+          <p>Eutirox 150mcg</p>
+        </div>
+        <div class="comida">
+          <div class="hora">9:00</div>
+          <p>3 claras + 1 yema + calabacín</p>
+        </div>
+        <div class="comida">
+          <div class="hora">11:00</div>
+          <p>Fruta baja GI (kiwi/mora) + yogur</p>
+        </div>
+        <div class="comida">
+          <div class="hora">13:00</div>
+          <p>Salmón 200g + boniato pequeño 150g</p>
+        </div>
+        <div class="comida">
+          <div class="hora">15:00</div>
+          <p>CrossFit fuerza 60min (60%) + ducha helada</p>
+        </div>
+        <div class="comida">
+          <div class="hora">17:00</div>
+          <p>Atún natural + espinacas + 1/2 aguacate</p>
+        </div>
+        <div class="calorias">Proteína 100g | Carbo 80g | Grasa 70g</div>
+      </div>
+
+      <!-- DÍAS 5-14 RESUMIDOS -->
+      <div class="dia">
+        <h3>📈 DÍA 5-14 - PROGRESIÓN ELITE</h3>
+        <div class="comida">
+          <p><strong>D5 MITOCONDRIAS (1800kcal):</strong> Tortilla 3h + plátano verde + ternera + quinoa + CrossFit 75%</p>
+        </div>
+        <div class="comida">
+          <p><strong>D6 NEUROPLASTICIDAD (2000kcal):</strong> Avena + whey + pollo + arroz + CrossFit 75%</p>
+        </div>
+        <div class="comida">
+          <p><strong>D7 LABORATORIO (2200kcal):</strong> TSH/T3/T4/PCR 8h → Batido whey + salmón + CrossFit PRs 85%</p>
+        </div>
+        <div class="comida">
+          <p><strong>D8-10 ADAPTACIÓN (2400kcal):</strong> +20% porciones | CrossFit 85-90%</p>
+        </div>
+        <div class="comida">
+          <p><strong>D11-14 RENDIMIENTO (2600kcal):</strong> Libre CrossFit | Prot 1.8g/kg | Carbo 4g/kg</p>
+        </div>
+      </div>
+
+      <!-- MÉTRICAS -->
+      <div class="metrics">
+        <h3>📊 MÉTRICAS DIARIAS (Notion/Excel)</h3>
+        <p>✓ Peso matutino | ✓ Pulso reposo | ✓ Glucosa capilar 10h</p>
+        <p>✓ Energía (1-10) | ✓ Calidad sueño | ✓ DOMS (1-10)</p>
+        <p>✓ Clases CrossFit | ✓ Duración ducha helada</p>
+        <p><strong>🔬 DÍA 7 8:00h:</strong> TSH/T3/T4/PCR/electrolitos/glucosa</p>
+      </div>
+
+      <!-- RESULTADOS -->
+      <div class="dia" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <h3>🎖️ RESULTADO ESPERADO 14 DÍAS</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; text-align: center;">
+          <div><strong>TSH</strong><br>↓20-40%</div>
+          <div><strong>PCR</strong><br>↓40-60%</div>
+          <div><strong>Mitocondrias</strong><br>×3</div>
+          <div><strong>Telómeros</strong><br>Preservados</div>
+          <div><strong>CrossFit</strong><br>PRs nuevos</div>
+          <div><strong>Eutirox</strong><br>↓25mcg?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarProtocolo(id) {
+      // Ocultar todos
+      document.querySelectorAll('.protocolo').forEach(p => p.classList.remove('activo'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('activo'));
+      
+      // Mostrar seleccionado
+      document.getElementById(id).classList.add('activo');
+      event.target.classList.add('activo');
+    }
+  </script>
+</body>
+</html>
